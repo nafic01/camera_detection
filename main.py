@@ -1,15 +1,23 @@
 import tkinter as tk
 from tkinter import ttk
 import object_counter  
-
+from object_counter import run
+import handtracker
 colour = 0
+
+# Open handtracker.py
+def run_hand_tracker():
+    handtracker.main()
+    print("Running Hand Tracker...")
 
 # Function to handle colour selection
 def set_colour(val, popup): # Popup is used in the paraemeter of this function because we want to destroy the popup after the user selects a colour.
     global colour
     colour = val
     print("Colour variable set to", colour)
+    object_counter.run(colour)
     popup.destroy()
+
 
 # Pop up function
 def ColourSelect():
@@ -27,7 +35,7 @@ def ColourSelect():
         popup, 
         text="Red", 
         command=lambda: set_colour(1, popup)
-    )
+    ) 
     red_button.pack(pady=5)
 
     green_button = ttk.Button(
@@ -85,7 +93,7 @@ object_button.pack(pady=5)
 hand_gesture_button = ttk.Button(
     mainframe,
     text="Hand Gesture Detection",
-    command=lambda: print("Hand Gesture Detection selected"),
+    command=run_hand_tracker,
     width=25
 )
 hand_gesture_button.pack(pady=5)

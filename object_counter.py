@@ -39,7 +39,7 @@ def run(selected_colour):
             area = cv2.contourArea(cnt)
             if area > 500:  # ignore small noise
                 x, y, w, h = cv2.boundingRect(cnt)
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0,255,0), 2)
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0,0,100), 2)
 
         # count how many objects are detected
         count = 0
@@ -48,7 +48,7 @@ def run(selected_colour):
                 count += 1
         # Display the count on the frame
         cv2.putText(frame, f"Objects: {count}", (20,50),
-            cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2)
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 2)
 
         # Added cleaning steps to reduce noise in the mask and show results in separate windows
         result = cv2.bitwise_and(frame, frame, mask=mask)
@@ -58,7 +58,7 @@ def run(selected_colour):
         cv2.imshow("Mask", mask)
         cv2.imshow("Result", result)
 
-        if cv2.waitKey(30) & 0xFF == ord('q'):
+        if cv2.waitKey(30) & 0xFF == ord('q') or cv2.waitKey(30) & 0xFF == ord('Q'):
             break
 
     cam.release()
