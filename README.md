@@ -15,7 +15,6 @@ Computer vision is widely used in robotics, automation, and AI systems to help m
 ---
 
 ## Tools Used
-
 * **Python** - I am using Python 3.14
 * **OpenCV** – for labelling and detecting objects using the webcam
 * **NumPy** – for numerical operations with OpenCV
@@ -35,7 +34,7 @@ pip3 install opencv-python numpy mediapipe
 ## Project Structure
 
 ```
-opencv-object-counter
+GestureVision
 │
 ├── object_counter.py       # Final program for object detection and counting
 ├── main.py                 # Brings together all the files and provides the GUI using TKinter
@@ -50,7 +49,7 @@ opencv-object-counter
 1. Clone the repository:
 
 ```bash
-git clone ttps://github.com/nafic01/camera_detection/
+git clone https://github.com/nafic01/GestureVision
 ```
 
 2. Navigate to the project folder:
