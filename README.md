@@ -19,11 +19,7 @@ Computer vision is widely used in robotics, automation, and AI systems to help m
 * **OpenCV** – for labelling and detecting objects using the webcam
 * **NumPy** – for numerical operations with OpenCV
 * **GitHub** – for version control and progress tracking
-<<<<<<< HEAD
-* **Mediapipe** - for detective hand gestures
-=======
 * **Mediapipe** - for detecting hand gestures
->>>>>>> efd603d (Added rectangles around detected objects in the object counter. Also added a kernel for morphological operations to reduce noise in the mask)
 * Laptop with webcam
 
 You can install the required libraries with:
@@ -42,7 +38,7 @@ GestureVision
 │
 ├── object_counter.py       # Final program for object detection and counting
 ├── main.py                 # Brings together all the files and provides the GUI using TKinter
-├── hand_detection.py       # Final program for hand detection
+├── handtracker.py          # Final program for hand detection
 ├── README.md               # Project documentation
 ```
 

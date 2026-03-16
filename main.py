@@ -26,7 +26,7 @@ def ColourSelect():
     """
     popup = tk.Toplevel()
     popup.title("Select Colour")
-    popup.geometry("250x150")
+    popup.geometry("300x200")
 
     popup_label = ttk.Label(popup, text="Select a colour to detect:")
     popup_label.pack(pady=10)
